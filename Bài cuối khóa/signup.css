@@ -1,0 +1,15 @@
+fieldset {
+    border: none;
+  }
+button {
+    background:pink;
+    color: balck;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+body {
+  background-color:white(125,275,212);
+}

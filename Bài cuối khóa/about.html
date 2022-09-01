@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div class="home-menu">
+        <a href="index.html" class="name">MINDX STORE</a>
+        <div class="title">
+            <h1>ABOUT US</h1>
+        </div>
+        <div class="link">
+            <ul>
+                <li class="hover" ><a href="index.html" >Trang chủ</a></li>
+                <li>></li>
+                <li>About us</li>
+            </ul>
+        </div>
+    </div>
+    <br><br>
+    <div class="mem">
+        <div class="flip">
+            <nav class="flipin">
+                <div class="flipfront">
+                    <img src="./img/man.jpg" alt="" style="width:300px;height:300px;">
+                </div>
+                <div class="flipback">
+                    <div class="flip">
+                        <h1>Lê Hồng Phúc</h1> 
+                        <br><br>
+                        <h2>Lớp 10</h2> 
+                        <br><br>
+                        <h2>Sinh sống tại Hà Nội</h2>
+                    </div>
+            </nav>
+        </div>
+        <div class="contact">
+            <div class="con">
+                <h1>Liên hệ</h1>
+                <br><br>
+                <h3>SDT: 0123456789</h3>
+                <br><br>
+                <h3>Email: abcdefgh@gmail.com</h3>
+            </div>
+        </div>
+        <div class="flip">
+            <nav class="flipin">
+                <div class="flipfront">
+                    <img src="./img/man.jpg" alt="" style="width:300px;height:300px;">
+                </div>
+                <div class="flipback">
+                    <div class="flip">
+                        <h1>Trần Lê Vinh</h1>
+                        <br><br>
+                        <h2>Lớp 11</h2> 
+                        <br><br>
+                        <h2>Sinh sống tại Hà Nội</h2>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <br><br>
+    <form action="#" class="cmt">
+        <h2>Comment</h2><br>
+        <input type="text" id="cmt">
+        <br><br>
+        <button onclick="save()">
+            Send</button>
+    </form>
+    <script>
+        function save(){
+            if(!localStorage.commentList){
+                localStorage.commentList = JSON.stringify([])
+            }
+            let commentList = JSON.parse(localStorage.commentList);
+            commentList.push({
+                cmt: document.getElementById("cmt").value,
+            });
+            localStorage.commentList = JSON.stringify(commentList);
+            document.getElementById("cmt").value = "";
+        }
+    </script>
+</body>
+</html>

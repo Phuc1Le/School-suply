@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí - Đăng Nhập</title>
+    <link rel="stylesheet" href="log.css">
+    <style>
+        body {
+            background: url("https://i.pinimg.com/originals/68/c4/70/68c4708015d06e72b945bad37a038006.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        form {
+            border: 3px solid white;
+            width: 360px;
+            text-align: center;
+            margin: auto;
+            margin-top: 200px;
+        }
+    </style>
+    <script src="log.js"></script>
+</head>
+<body>
+
+    <form>
+        Username:<br>
+        <input type="text" id="username" required="">
+        <br>
+        Password:<br>
+        <input type="password" id = "pwd" required="">
+        <div class="input-form">
+            <p>Bạn Chưa Có Tài Khoản? <a href="signup.html">Đăng kí</a></p>
+        </div>
+        <button onclick="checkInput()" type="button">
+            Đăng nhập</button>
+    </form>
+    
+</body>
+
+</html>
